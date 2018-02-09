@@ -14,6 +14,19 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname,'public')));
+
+mongoose.Promise = Promise;
+mongoose.connect("mongodb://localhost/react-nyt", {
+    useMongoClient: true
+});
+
+// Routing
+const routes = require('./controllers/controller');
+app.use('/', routes);
+
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
