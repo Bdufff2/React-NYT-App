@@ -1,0 +1,12 @@
+.footer {
+    text-align: left;
+    background-color: #00BFA5;
+    bottom: 0;
+    position: relative;
+    color: #fff;
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+.footer h4 {
+    margin-left: 10px;
+}
