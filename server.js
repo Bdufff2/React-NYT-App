@@ -1,7 +1,11 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const PORT = process.env.PORT || 3000;
 const app = express();
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -19,12 +23,10 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,'public')));
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/react-nyt", {
-    useMongoClient: true
-});
+mongoose.connect("mongodb://localhost/react-nyt");
 
 // Routing
-const routes = require('./controllers/controller');
+const routes = require('./controllers/controller.js');
 app.use('/', routes);
 
 app.listen(PORT, function() {

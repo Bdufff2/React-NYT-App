@@ -10,9 +10,6 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        
-          
-        
         <div className="App">
           <Header />
           <Search />

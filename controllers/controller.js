@@ -1,30 +1,17 @@
 const express = require('express');
 // initialize express router
 const router = express.Router();
-
-const Article = require('../models/Article.js');
-
-
+// 
+const Article = require('../models/Articles.js');
 
 
-const authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931";
+// Display the application's home page
+router.get('/', function(req, res) {
+  res.send('/client/public/index.html');
+});
 
-// These constiables will hold the results we get from the user's inputs via HTML
-const searchTerm = "";
-const numResults = 0;
-const startYear = 0;
-const endYear = 0;
+router.get('/api/articles',function(req, res){
+  console.log(req.body);
 
-// queryURLBase is the start of our API endpoint. The searchTerm will be appended to this when
-// the user hits the search button
-const queryURLBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" +
-  authKey + "&q=";
-
-
-
-
-
-
-router.get('/api/')
-
+})
 module.exports = router;
