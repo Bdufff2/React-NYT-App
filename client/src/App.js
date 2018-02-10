@@ -5,6 +5,7 @@ import Search from './components/Search';
 import Results from './components/Results';
 import Saved from './components/Saved';
 import Footer from './components/Footer';
+import API from './utils/API.js'
 
 class App extends Component {
   render() {
