@@ -3,10 +3,11 @@
     background-color: #00BFA5;
     bottom: 0;
     position: relative;
+    width: 100%;
     color: #fff;
     padding-top:15px;
     padding-bottom: 15px;
 }
-.footer h4 {
+.footer > h4 {
     margin-left: 10px;
 }

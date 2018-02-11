@@ -8,21 +8,21 @@ const Form = props => (
             <input
                 type="text"
                 name="form-topic"
-                onChange={}
+                // onChange={}
                 required
             />
             <h4>Start Year</h4>
             <input
                 type="text"
                 name="form-start"
-                onChange={}
+                // onChange={}
                 required
             />
             <h4>End Year</h4>
             <input
                 type="text"
                 name="form-end"
-                onChange={}
+                // onChange={}
                 required
             />
             <br/><br/>
@@ -31,7 +31,7 @@ const Form = props => (
                 type="submit"
                 id="search-btn"
                 value="Search"
-                onclick={}
+                // onclick={}
             />
         </form>
     </div>
