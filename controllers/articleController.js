@@ -37,7 +37,7 @@ module.exports = {
     remove: function(req, res) {
         db.Article
             .findById({ _id: req.params.id })
-            .then(dbArticle => dbArticle.destroy())
+            .then(dbArticle => dbArticle.remove())
             .then(dbArticle => res.json(dbArticle))
             .catch(err => res.status(418).json(err));
     }
